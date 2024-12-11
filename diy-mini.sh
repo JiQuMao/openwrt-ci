@@ -119,7 +119,7 @@ sed -i 's|admin\\|admin\\/services\\|g' feeds/luci/applications/luci-app-dockerm
 # sed -i '/samba4/s/^/#/' package/lean/default-settings/files/zzz-default-settings
 
 # 关闭ipv6:
-cat >> .config <<EOF
+cat >> .configs <<EOF
 CONFIG_KERNEL_IPV6=n
 CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=n
 CONFIG_KERNEL_IPV6_SUBTREES=n
