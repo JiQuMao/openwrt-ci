@@ -124,3 +124,12 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+# 关闭ipv6:
+cat >> .config <<EOF
+CONFIG_KERNEL_IPV6=n
+CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=n
+CONFIG_KERNEL_IPV6_SUBTREES=n
+CONFIG_KERNEL_IPV6_MROUTE=n
+CONFIG_IPV6=n
+EOF
